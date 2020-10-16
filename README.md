@@ -6,7 +6,7 @@ This project is my capstone project as part of my Data Science Immersive course 
 Based on [The Deloitte Consumer Review](https://www2.deloitte.com/content/dam/Deloitte/ch/Documents/consumer-business/ch-en-consumer-business-made-to-order-consumer-review.pdf), consumers are demanding more personalised experience, however there is still an unmet need in some categories.  Over 40% of adults aged 16-39 are interested in personalised beauty products and fashion accessories/jewelry, while trial remains low (only 10% and 14% respectively).  Among those who are interested in personalised products for these 2 categories, around 80% are willing to pay premium price (10% or more). 
 
 By being able to classify face shapes, brands will be able to offer more personalised solutions to better satisfy their consumers, while increasing margin from premium positioning.  Example of use cases are:
-- Customised face mask [3D Printed Mask](https://www.red-dot.org/project/iope-tailored-solution-40454)
+- Customised face mask 
 - Customised make-up tips based on face shape [vdo](https://www.youtube.com/watch?v=ZeJP_2IM-2Q)
 - Recommendations for glasses or sunglasses
 - Recommendations for accessories (i.e. earrings)
