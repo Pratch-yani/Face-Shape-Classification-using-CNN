@@ -1,5 +1,5 @@
 # Face_Shape_Classification
-This project is my capstone project as part of my Data Science Immersive course at General Assembly.  It aims to classifies facial images into 5 different face shapes with Convolutional Neural Networks.  
+This project is my capstone project as part of my Data Science Immersive course at General Assembly.  It aims to classify facial images into 5 different face shapes with Convolutional Neural Networks.  
 
 # Problem Statement
 
