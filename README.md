@@ -3,7 +3,7 @@ This project is my capstone project as part of my Data Science Immersive course 
 
 # Problem Statement
 
-Based on [The Deloitte Consumer Review](https://www2.deloitte.com/content/dam/Deloitte/ch/Documents/consumer-business/ch-en-consumer-business-made-to-order-consumer-review.pdf), consumers are demanding more personalised experience, however there is still an unmet need in some categories.  Over 40% of adults aged 16-39 are interested in personalised beauty products and fashion accessories/jewelry, while trial remains low (only 10% and 14% respectively).  Among those who are interested in personalised products for these 2 categories, around 80% are willing to pay premium price (10% or more). 
+Based on [The Deloitte Consumer Review](https://www2.deloitte.com/content/dam/Deloitte/ch/Documents/consumer-business/ch-en-consumer-business-made-to-order-consumer-review.pdf), consumers are demanding more personalised experience, however there is still an unmet need in some categories, especially beauty and fashion industry.  Over 40% of adults aged 16-39 are interested in personalised beauty products and fashion accessories/jewelry, while trial remains low (only 10% and 14% respectively).  Among those who are interested in personalised products for these 2 categories, around 80% are willing to pay premium price (10% or more). 
 
 By being able to classify face shapes, brands will be able to offer more personalised solutions to better satisfy their consumers, while increasing margin from premium positioning.  Example of use cases are:
 - Customised face mask 
@@ -21,6 +21,6 @@ Key learning:
 - Image pre-process (specifically the bounding box) helps the model train better especially with limited dataset (4000 training images).
 - Transfer Learning with the weights trained on larger datasets (2.6 million images) can help improve the accuracy of training as well as the speed.  
 - Oval shape is harder to predict with misclassification in different classes.  
-- The model performs better on images where the bounding box can be easily detected, however does not predict well on images that the full face cannot be detected (i.e. circle frame, or book club).  
+- The model performs better on images where the bounding box can be easily detected, however does not predict well on images that the full face cannot be detected (i.e. circle frame, or tilted angle).  
 
 
