@@ -15,7 +15,7 @@ For this project, we will be using Deep Learning approach with Convolutional Neu
 
 ## Conclusion & Key Learning:
 
-The CNN models are suitable for image classification as it trains well with fewer parameter when compared to Fully Connected model. 
+The CNN models are suitable for image classification as it trains well with fewer parameter when compared to Fully Connected model.  The CNN model from scratch achieves accuracy of ~80%, while incorporating transfer learning using VGG-Face increased the accuracy to over 90%. 
 
 Key learning:
 - Image pre-process (specifically the bounding box) helps the model train better especially with limited dataset (4000 training images).
