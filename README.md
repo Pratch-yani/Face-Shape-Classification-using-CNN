@@ -20,22 +20,19 @@ I have explored 2 approaches of CNN by **building from scratch** vs. **trasfer l
 
 ![title](images/exec_summary.png)
 
-Pre-processing of the images also played an important role in reducing overfitting and increasing validation accuracy.  Key drivers are:
-- **Face Detection** using Multi-Task Cascaded Convolutional Neural Network (MTCNN) to automatically detect bounding box around the face.  This helped improved validation accuracy by 21% 
-- **Image Augmentation** by flipping and rotating, which improved validation accuracy by 6%
-- **RGB color images** improved accuracy by 2-3% vs. grayscale
+Image pre-processing also played an important role in reducing overfitting and increasing validation accuracy.  Key drivers are:
+- **Face Detection** using Multi-Task Cascaded Convolutional Neural Network (MTCNN) to automatically detect bounding box around the face.  
+- **Image Augmentation** by flipping horizontally and rotating +/- 20 degrees
+- **RGB color images** improved accuracy vs. grayscale
+
+
+---
+
+
 
 ## Project Approach
 
-
-**Pre-processing of the images** is a critical factor to drive higher accuracy.  In the project, I have explored the following:
-- **Face Detection** to identify the bounding box around the face significantly drove validation accuracy (from 47.3% to 68.6%).  For this project, I used Multi-Task Cascaded Convolutional Neural Network (MTCNN) as face detector.  Reference: implementation by Iván de Paz Centeno in the [ipazc/mtcnn](https://github.com/ipazc/mtcnn) project.
-- **Image Augmentation** to account for different pose (i.e. head tilting).  For this project I used flipping and +/- 20 degrees rotation, which improved accuracy by 5.7%.  
-- **RGB color images** improved accuracy by 2-3% vs. grayscale.
-
-
-
-# Data
+### Data
 
 The [Face Shape Dataset](https://www.kaggle.com/niten19/face-shape-dataset) is a dataset from Kaggle by Niten Lama. 
 
@@ -49,21 +46,31 @@ This dataset comprises a total of 5000 images of the female celebrities from all
 Each category consists of 1000 images (800 for training : 200 for testing)
 
 ### Image Pre-processing
-Face detection is the process of automatically locating faces in a photograph and localizing them by drawing a bounding box around their extent.
 
-In this tutorial, we will also use the Multi-Task Cascaded Convolutional Neural Network, or MTCNN, for face detection, e.g. finding and extracting faces from photos. This is a state-of-the-art deep learning model for face detection, described in the 2016 paper titled “Joint Face Detection and Alignment Using Multitask Cascaded Convolutional Networks.”
+Pre-processing of the images is a critical factor in reducing model overfitting to the training dataset, and increasing the validation accuracy.  The following steps have been explored:
+- **Face Detection** to automatically locate the face in the image and identify the bounding box around the face for cropping.  I used Multi-Task Cascaded Convolutional Neural Network (MTCNN) as face detector.  Reference: implementation by Iván de Paz Centeno in the [ipazc/mtcnn](https://github.com/ipazc/mtcnn) project.
+- **RGB color images** added more dimensions to each image data (3D array for RGB vs 1D array for grayscale), hence improving accuracy
+- **Image Augmentation** to account for different pose (i.e. head tilting), I used horizontal flipping as well as rotating by +/- 20 degrees.
 
-We will use the implementation provided by Iván de Paz Centeno in the ipazc/mtcnn project. This can also be installed via pip as follows:
-VGG-16 architecture and pre-trained weights from VGGFace as implemented in [keras-vggface project](https://github.com/rcmalli/keras-vggface) by Refik Can Malli.
 
-## Conclusion & Key Learning:
+### Modelling
 
-The CNN models are suitable for image classification as it trains well with fewer parameter when compared to Fully Connected model.  The CNN model from scratch achieves accuracy of ~80%, while incorporating transfer learning using VGG-Face increased the accuracy to over 90%. 
+**CNN Model built from scratch** With limited training data of 4000 images (800 images x 5 classes), I build the model with 4 Convolutional + Max-Pooling Layers, and 2 Dense layers (details below).  
+
+**CNN Model with transfer learning** enables me to use a more complex VGG-16 architecture, by using pre-trained weights from VGGFace that has been trained on over 2.6 Million images.  
+- [VGG-16 architecture](https://www.robots.ox.ac.uk/~vgg/research/very_deep/) is designed by [Visual Geometry Group - University of Oxford](https://www.robots.ox.ac.uk/~vgg/), which won awards for image classification and localization from [Imagenet 2014 competition](http://www.image-net.org/challenges/LSVRC/2014/results#clsloc) 
+- I used the pre-trained weights from the library of [keras-vggface project](https://github.com/rcmalli/keras-vggface) by Refik Can Malli, which is based on original VGGFace, previously names [Deep Face Recognition](http://www.robots.ox.ac.uk/~vgg/publications/2015/Parkhi15/parkhi15.pdf) by [Visual Geometry Group - University of Oxford](https://www.robots.ox.ac.uk/~vgg/)
+
+### Model Evaluation
+
+### Conclusion & Key Learning:
+
+While image pre-processing is critical to reduce overfitting and improve accuracy in the CNN model built from scratch, but there is still limitations due to small datasets.  The transfer learning model allows for more complex architecture to be used on small datasets (4000 training images), by using the weights that has been pre-trained on larger datasets (2.6 Million imagaes).  The CNN model from scratch achieves accuracy of ~80%, while incorporating transfer learning using VGG-Face increased the accuracy to over 90%. 
 
 Key learning:
-- Image pre-process (specifically the bounding box) helps the model train better especially with limited dataset (4000 training images).
-- Transfer Learning with the weights trained on larger datasets (2.6 million images) can help improve the accuracy of training as well as the speed.  
+- Face detection is the critical step to drive accuracy of predictions for both CNN model from scratch and transfer learning.  
+- Input image affects the accuracy of prediction.  The model performs better on images where the bounding box can be easily detected, however does not predict well on images that the full face cannot be detected (i.e. tilted face, wearing sunglasses, cropped parts of the face).  
 - Oval shape is harder to predict with misclassification in different classes.  
-- The model performs better on images where the bounding box can be easily detected, however does not predict well on images that the full face cannot be detected (i.e. circle frame, or tilted angle).  
+
 
 
