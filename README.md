@@ -5,9 +5,9 @@ This is an **image classification project to identify 5 female face shapes using
 
 ## Problem Statement
 
-Based on [The Deloitte Consumer Review](https://www2.deloitte.com/content/dam/Deloitte/ch/Documents/consumer-business/ch-en-consumer-business-made-to-order-consumer-review.pdf), consumers are demanding more personalised experience, however trial remains low.  In beauty and fashion industry, over 40% of adults aged 16-39 are interested in personalised offer, while trial is only 10% and 14% respectively.  Among those who are interested, around 80% are willing to pay premium price (10% or more). 
+Based on [The Deloitte Consumer Review](https://www2.deloitte.com/content/dam/Deloitte/ch/Documents/consumer-business/ch-en-consumer-business-made-to-order-consumer-review.pdf), consumers are demanding more personalised experience, however trial remains low.  In beauty and fashion industry, over 40% of adults aged 16-39 are interested in personalised offer, while trial is only 10%-14%.  Among those who are interested, ~80% are willing to pay at least 10% higher price. 
 
-By being able to classify face shapes will enable brands to offer more personalised solutions to better satisfy their consumers, while increasing margin from premium positioning.  Example of use cases are:
+By being able to classify face shapes will enable brands to offer more personalised solutions to increase customer satisfaction, while increasing margin from premium positioning.  Example of use cases are:
 - Personalised content (i.e. make-up tips, hairstyles)
 - Personalised recommendations for make-up, glasses/sunglasses, and fashion accessories (i.e. earrings, necklaces, hat, etc)
 - Customised beauty products (i.e. facial skincare masks, make-up pallette)
@@ -16,9 +16,16 @@ For this project, I will be using Deep Learning approach with Convolutional Neur
 
 ## Executive Summary
 
-In this project I have explored 2 approaches for CNN by **building from scratch** vs. **trasfer learning** with VGG-16 architecture and pre-trained weights from VGGFace as implemented in [keras-vggface project](https://github.com/rcmalli/keras-vggface) by Refik Can Malli.  Transfer learning approach helped increased accuracy.  The most mis-classified face shape is 'Oval'.
+I have explored 2 approaches of CNN by **building from scratch** vs. **trasfer learning** with VGG-16 architecture and pre-trained weights from VGGFace.  Transfer learning approach helped increased accuracy, while the most mis-classified face shape is 'Oval'.
 
 ![title](images/exec_summary.png)
+
+Pre-processing of the images also played an important role in reducing overfitting and increasing validation accuracy.  Key drivers are:
+- **Face Detection** using Multi-Task Cascaded Convolutional Neural Network (MTCNN) to automatically detect bounding box around the face.  This helped improved validation accuracy by 21% (CNN from scratch)
+- **Image Augmentation** by flipping and rotating (+/- 20 degrees), which improved validation accuracy by 6% (CNN from scratch)
+- **RGB color images** improved accuracy by 2-3% vs. grayscale (CNN from scratch)
+
+## Project Approach
 
 
 **Pre-processing of the images** is a critical factor to drive higher accuracy.  In the project, I have explored the following:
@@ -47,7 +54,7 @@ Face detection is the process of automatically locating faces in a photograph an
 In this tutorial, we will also use the Multi-Task Cascaded Convolutional Neural Network, or MTCNN, for face detection, e.g. finding and extracting faces from photos. This is a state-of-the-art deep learning model for face detection, described in the 2016 paper titled “Joint Face Detection and Alignment Using Multitask Cascaded Convolutional Networks.”
 
 We will use the implementation provided by Iván de Paz Centeno in the ipazc/mtcnn project. This can also be installed via pip as follows:
-
+VGG-16 architecture and pre-trained weights from VGGFace as implemented in [keras-vggface project](https://github.com/rcmalli/keras-vggface) by Refik Can Malli.
 
 ## Conclusion & Key Learning:
 
