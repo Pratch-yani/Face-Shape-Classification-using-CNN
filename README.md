@@ -18,7 +18,7 @@ For this project, I will be using Deep Learning approach with Convolutional Neur
 
 I have explored 2 approaches of CNN by **building from scratch** vs. **trasfer learning** with VGG-16 architecture and pre-trained weights from VGGFace.  Transfer learning approach helped increased accuracy, while the most mis-classified face shape is 'Oval'.
 
-![title](images/exec_summary.png)
+
 
 Pre-processing of the images also played an important role in reducing overfitting and increasing validation accuracy.  Key drivers are:
 - **Face Detection** using Multi-Task Cascaded Convolutional Neural Network (MTCNN) to automatically detect bounding box around the face.  This helped improved validation accuracy by 21% (CNN from scratch)
