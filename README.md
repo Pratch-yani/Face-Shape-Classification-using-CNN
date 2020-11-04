@@ -1,4 +1,4 @@
-1[](/images/face_app_cover.jpg)
+![tittle](images/face_app_cover.jpg)
 
 # Face_Shape_Classification
 This project is my capstone project as part of my Data Science Immersive course at General Assembly.  It aims to classify facial images into 5 different face shapes with Convolutional Neural Networks.  
