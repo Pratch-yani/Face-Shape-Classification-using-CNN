@@ -5,15 +5,28 @@ This is an image classification project to identify 5 female face shapes using C
 
 # Problem Statement
 
-Based on [The Deloitte Consumer Review](https://www2.deloitte.com/content/dam/Deloitte/ch/Documents/consumer-business/ch-en-consumer-business-made-to-order-consumer-review.pdf), consumers are demanding more personalised experience, however there is still an unmet need in some categories, especially beauty and fashion industry.  Over 40% of adults aged 16-39 are interested in personalised beauty products and fashion accessories/jewelry, while trial remains low (only 10% and 14% respectively).  Among those who are interested in personalised products for these 2 categories, around 80% are willing to pay premium price (10% or more). 
+Based on [The Deloitte Consumer Review](https://www2.deloitte.com/content/dam/Deloitte/ch/Documents/consumer-business/ch-en-consumer-business-made-to-order-consumer-review.pdf), consumers are demanding more personalised experience, however trial remains low.  In beauty and fashion industry, over 40% of adults aged 16-39 are interested in personalised offer, while trial is only 10% and 14% respectively.  Among those who are interested, around 80% are willing to pay premium price (10% or more). 
 
-By being able to classify face shapes, brands will be able to offer more personalised solutions to better satisfy their consumers, while increasing margin from premium positioning.  Example of use cases are:
+By being able to classify face shapes will enable brands to offer more personalised solutions to better satisfy their consumers, while increasing margin from premium positioning.  Example of use cases are:
 - Customised face mask 
 - Customised make-up tips based on face shape [vdo](https://www.youtube.com/watch?v=ZeJP_2IM-2Q)
 - Recommendations for glasses or sunglasses
-- Recommendations for accessories (i.e. earrings)
+- Recommendations for fashion accessories (i.e. earrings, necklaces, hat)
 
-For this project, we will be using Deep Learning approach with Convolutional Neural Networks to classify 5 different female face shapes (Heart, Oblong, Oval, Round, Square).  The model that was highest accuracy score will be chosen.
+For this project, I will be using Deep Learning approach with Convolutional Neural Networks to classify 5 different female face shapes (Heart, Oblong, Oval, Round, Square).  The model that was highest accuracy score will be chosen.
+
+# Data
+
+The [Face Shape Dataset](https://www.kaggle.com/niten19/face-shape-dataset) is a dataset from Kaggle by Niten Lama. 
+
+This dataset comprises a total of 5000 images of the female celebrities from all around the globe which are categorized according to their face-shape namely: 
+- Heart
+- Oblong
+- Oval 
+- Round
+- Square
+
+Each category consists of 1000 images (800 for training : 200 for testing)
 
 ## Conclusion & Key Learning:
 
