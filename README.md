@@ -61,6 +61,8 @@ Pre-processing of the images is a critical factor in reducing model overfitting 
 - [VGG-16 architecture](https://www.robots.ox.ac.uk/~vgg/research/very_deep/) is designed by [Visual Geometry Group - University of Oxford](https://www.robots.ox.ac.uk/~vgg/), which won awards for image classification and localization from [Imagenet 2014 competition](http://www.image-net.org/challenges/LSVRC/2014/results#clsloc) 
 - I used the pre-trained weights from the library of [keras-vggface project](https://github.com/rcmalli/keras-vggface) by Refik Can Malli, which is based on original VGGFace, previously names [Deep Face Recognition](http://www.robots.ox.ac.uk/~vgg/publications/2015/Parkhi15/parkhi15.pdf) by [Visual Geometry Group - University of Oxford](https://www.robots.ox.ac.uk/~vgg/)
 
+![tittle](images/model_architecture.png)
+
 ### Model Evaluation
 
 ### Conclusion & Key Learning:
