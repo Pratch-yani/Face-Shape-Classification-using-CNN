@@ -1,7 +1,7 @@
 ![tittle](images/face_app_cover.jpg)
 
 # Face_Shape_Classification
-This project aims to classify facial images into 5 different face shapes using Convolutional Neural Networks.    
+This is an image classification project to identify 5 female face shapes using Convolutional Neural Networks.  I completed this project as my Capstone for Data Science Immersive course with General Assembly (October 2020).
 
 # Problem Statement
 
