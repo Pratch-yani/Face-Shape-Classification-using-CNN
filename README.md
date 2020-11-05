@@ -18,7 +18,7 @@ For this project, I will be using Deep Learning approach with Convolutional Neur
 
 I have explored 2 approaches of CNN by **building from scratch** vs. **trasfer learning** with VGG-16 architecture and pre-trained weights from VGGFace.  Transfer learning approach helped increased accuracy, while the most mis-classified face shape is 'Oval'.
 
-
+![tittle](images/exec_summary.png)
 
 Image pre-processing also played an important role in reducing overfitting and increasing validation accuracy.  Key drivers are:
 - **Face Detection** using Multi-Task Cascaded Convolutional Neural Network (MTCNN) to automatically detect bounding box around the face.  This helps improve validation accuracy and reduce overfitting.
@@ -78,7 +78,7 @@ Summary of all models below.
 
 Both models have highest misclassification on **Oval** face shape.  Although the transfer learning model improved the accuracy of the model built from scratch, yet Oval is still the most misclassified, with the majority incorrectly classifying Oval as Round.  Interestingly, Round face is also misclassified as Oval, although overall misclassification is low.  The confusion between Oval and Round are mostly Asian faces, this is likely because the models has been pretrained on less Asian images. 
 
-
+![tittle](images/confusion_matrix.png)
 
 ![title](images/misclassification_OVAL.png)
 
