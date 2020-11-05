@@ -3,6 +3,8 @@
 # Face Shape Classification
 This is an **image classification project to identify 5 female face shapes using Convolutional Neural Networks (CNN)**.  I completed this as my Capstone Project for Data Science Immersive course with General Assembly (October 2020).
 
+This project is also deployed as a web app using [Stremlit](https://www.streamlit.io/) on [Heroku](www.heroku.com).  If you're interested, check your face shape at [myfaceshape.herokuapp.com](myfaceshape.herokuapp.com)
+
 ## Problem Statement
 
 Based on [The Deloitte Consumer Review](https://www2.deloitte.com/content/dam/Deloitte/ch/Documents/consumer-business/ch-en-consumer-business-made-to-order-consumer-review.pdf), consumers are demanding more personalised experience, however trial remains low.  In beauty and fashion industry, over 40% of adults aged 16-39 are interested in personalised offer, while trial is only 10%-14%.  Among those who are interested, ~80% are willing to pay at least 10% higher price. 
