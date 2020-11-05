@@ -76,7 +76,7 @@ Summary of all models below.
 
 #### Misclassification
 
-Both models have highest misclassification on **Oval** face shape.  Although the transfer learning model improved the accuracy of the model built from scratch, yet Oval is still the most misclassified.  When looking at the misclassified images, the majority is classifying Oval as Round and mostly on Asian faces.  This is likely due to less Asian images in the training data.
+Both models have highest misclassification on **Oval** face shape.  Although the transfer learning model improved the accuracy of the model built from scratch, yet Oval is still the most misclassified, with the majority incorrectly classifying Oval as Round.  Interestingly, Round face is also misclassified as Oval, although overall misclassification is low.  The confusion between Oval and Round are mostly Asian faces, this is likely because the models has been pretrained on less Asian images. 
 
 ![title](images/confusion_matrix.png)
 
@@ -90,7 +90,7 @@ Both models have highest misclassification on **Oval** face shape.  Although the
 
 - **Image pre-processing**, particularly face detection and image augmentation, helped improve accuracy and reduce overfitting.
 - With limited datasets (4000 training images), **transfer learning** using pretrained weights on larger datasets (VGGFace 2.6 million images) and more complex architecture (VGG16), significantly helped improve accuracy, reduce overfitting, and faster trainging time.The CNN model from scratch achieves accuracy of ~80%, while incorporating transfer learning using VGG-Face increased the accuracy to over 90%. 
-- Majority of the **misclassification** is Oval face shape, especially Asian oval faces are classified as round, likely because the model is less trained on Asian images.
+- Majority of the **misclassification** is Oval face shape, especially Asian oval faces are classified as round, likely because the model has been pretrained on fewer Asian images.
 - When testing on unseen data, **face detection** is the critical step to drive accuracy of predictions.  The model performs better on images where the bounding box can be easily detected, however does not predict well on images that the full face cannot be detected (i.e. tilted face, wearing sunglasses, cropped parts of the face).  
 
 
