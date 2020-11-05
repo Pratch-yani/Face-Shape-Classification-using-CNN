@@ -3,7 +3,7 @@
 # Face Shape Classification
 This is an **image classification project to identify 5 female face shapes using Convolutional Neural Networks (CNN)**.  I completed this as my Capstone Project for Data Science Immersive course with General Assembly (October 2020).
 
-This project is also deployed as a web app using [Stremlit](https://www.streamlit.io/) on [Heroku](www.heroku.com).  If you're interested, check your face shape at [myfaceshape.herokuapp.com](myfaceshape.herokuapp.com)
+This project is also deployed as a web app using [Stremlit](https://www.streamlit.io/) on [Heroku](https://www.heroku.com/home).  If you're interested, check your face shape at [myfaceshape.herokuapp.com](myfaceshape.herokuapp.com)
 
 ## Problem Statement
 
