@@ -76,7 +76,7 @@ Summary of all models below.
 
 #### Misclassification
 
-Both models have highest misclassification on **Oval** face shape.  Although the transfer learning model improved the accuracy of the model built from scratch, yet Oval is still the most misclassified.  When looking at the misclassified images, the majority is classifying Oval as Round and mostly on Asian faces.
+Both models have highest misclassification on **Oval** face shape.  Although the transfer learning model improved the accuracy of the model built from scratch, yet Oval is still the most misclassified.  When looking at the misclassified images, the majority is classifying Oval as Round and mostly on Asian faces.  This is likely due to less Asian images in the training data.
 
 ![title](images/exec_summary.png)
 
