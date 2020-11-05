@@ -63,7 +63,13 @@ Pre-processing of the images is a critical factor in reducing model overfitting 
 
 ### Model Evaluation
 
-Transfer Learning helped improved accuracy significantly, from 76.9% to 92.7%, with the help of pre-trained weights on larger dataset.  Summary of all models below.
+Transfer Learning helped improved accuracy significantly, from 76.9% to 92.7%, with the help of pre-trained weights on larger dataset.  
+
+From the models built from scratch, all models performed better than baseline of 20% (5 classes are balanced with 20% each).
+- The face detection (bounding box) helped improve accuracy vs. resizing and cropping the image.
+- Image Augmentation helped improve accuracy and reduce overfitting.
+
+Summary of all models below.
 
 ![tittle](images/model_evaluation.png)
 
