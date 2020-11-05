@@ -86,12 +86,10 @@ Both models have highest misclassification on **Oval** face shape.  Although the
 
 ### Conclusion & Key Learning:
 
-While image pre-processing is critical to reduce overfitting and improve accuracy in the CNN model built from scratch, but there is still limitations due to small datasets.  The transfer learning model allows for more complex architecture to be used on small datasets (4000 training images), by using the weights that has been pre-trained on larger datasets (2.6 Million imagaes).  The CNN model from scratch achieves accuracy of ~80%, while incorporating transfer learning using VGG-Face increased the accuracy to over 90%. 
-
-Key learning:
-- Face detection is the critical step to drive accuracy of predictions for both CNN model from scratch and transfer learning.  
-- Input image affects the accuracy of prediction.  The model performs better on images where the bounding box can be easily detected, however does not predict well on images that the full face cannot be detected (i.e. tilted face, wearing sunglasses, cropped parts of the face).  
-- Oval shape is harder to predict with misclassification in different classes.  
+- **Image pre-processing**, particularly face detection and image augmentation, helped improve accuracy and reduce overfitting.
+- With limited datasets (4000 training images), **transfer learning** using pretrained weights on larger datasets (VGGFace 2.6 million images) and more complex architecture (VGG16), significantly helped improve accuracy, reduce overfitting, and faster trainging time.The CNN model from scratch achieves accuracy of ~80%, while incorporating transfer learning using VGG-Face increased the accuracy to over 90%. 
+- Majority of the **misclassification** is Oval face shape, especially Asian oval faces are classified as round, likely because the model is less trained on Asian images.
+- When testing on unseen data, **face detection** is the critical step to drive accuracy of predictions.  The model performs better on images where the bounding box can be easily detected, however does not predict well on images that the full face cannot be detected (i.e. tilted face, wearing sunglasses, cropped parts of the face).  
 
 
 
