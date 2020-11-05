@@ -21,8 +21,8 @@ I have explored 2 approaches of CNN by **building from scratch** vs. **trasfer l
 ![title](images/exec_summary.png)
 
 Image pre-processing also played an important role in reducing overfitting and increasing validation accuracy.  Key drivers are:
-- **Face Detection** using Multi-Task Cascaded Convolutional Neural Network (MTCNN) to automatically detect bounding box around the face.  
-- **Image Augmentation** by flipping horizontally and rotating +/- 20 degrees
+- **Face Detection** using Multi-Task Cascaded Convolutional Neural Network (MTCNN) to automatically detect bounding box around the face.  This helps improve validation accuracy and reduce overfitting.
+- **Image Augmentation** by flipping horizontally and rotating +/- 20 degrees. This helps increase accuracy and reduce overfitting.
 
 
 ---
@@ -48,8 +48,8 @@ Each category consists of 1000 images (800 for training : 200 for testing)
 
 Pre-processing of the images is a critical factor in reducing model overfitting to the training dataset, and increasing the validation accuracy.  The following steps have been explored:
 - **Face Detection** to automatically locate the face in the image and identify the bounding box around the face for cropping.  I used Multi-Task Cascaded Convolutional Neural Network (MTCNN) as face detector.  Reference: implementation by Iván de Paz Centeno in the [ipazc/mtcnn](https://github.com/ipazc/mtcnn) project.
-- **Image Augmentation** to account for different pose (i.e. head tilting), I used horizontal flipping as well as rotating by +/- 20 degrees.  This helps increase accuracy and reduce overfitting.
-- **RGB color images** added more dimensions to each image data (3D array for RGB vs 1D array for grayscale), hence improving accuracy however also increase in overfitting.
+- **Image Augmentation** to account for different pose (i.e. head tilting), I used horizontal flipping as well as rotating by +/- 20 degrees.  
+- **RGB color images** added more dimensions to each image data (3D array for RGB vs 1D array for grayscale).
 
 ### Modelling
 
@@ -68,10 +68,21 @@ Transfer Learning helped improved accuracy significantly, from 76.9% to 92.7%, w
 From the models built from scratch, all models performed better than baseline of 20% (5 classes are balanced with 20% each).
 - The face detection (bounding box) helped improve accuracy vs. resizing and cropping the image.
 - Image Augmentation helped improve accuracy and reduce overfitting.
+- RGB color image slightly helped improve accuracy, however with higher overfitting.
 
 Summary of all models below.
 
 ![tittle](images/model_evaluation.png)
+
+#### Misclassification
+
+Both models have highest misclassification on **Oval** face shape.  Although the transfer learning model improved the accuracy of the model built from scratch, yet Oval is still the most misclassified.  When looking at the misclassified images, the majority is classifying Oval as Round and mostly on Asian faces.
+
+![title](images/exec_summary.png)
+
+![title](images/misclassification.png)
+
+
 
 ### Conclusion & Key Learning:
 
